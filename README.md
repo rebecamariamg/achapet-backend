@@ -42,9 +42,19 @@ Pip instalado
 
 📥 Passo a Passo de Instalação
 1️⃣ Clone o Repositório
-
 git clone https://github.com/SEU_USUARIO/achapet-backend.git
 cd achapet-backend
+
+2️⃣ Crie e Ative o Ambiente Virtual
+# Criar o ambiente virtual
+python3 -m venv venv
+
+# Ativar (Mac/Linux)
+source venv/bin/activate
+
+# Ativar (Windows)
+.\venv\Scripts\Activate.ps1
+
 
 Você saberá que está ativado ao ver (venv) antes do comando no terminal.
 
