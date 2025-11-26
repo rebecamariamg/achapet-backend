@@ -1,13 +1,16 @@
-🐾 AchaPet API
+# 🐾 AchaPet API
 
-Python 3.9+ | FastAPI
+**Python 3.9+ | FastAPI**
 
-API desenvolvida em FastAPI para gerenciamento de pets, usuários e funcionalidades relacionadas ao sistema AchaPet.
+API desenvolvida em **FastAPI** para gerenciamento de pets, usuários e funcionalidades do sistema AchaPet.
 
-📜 Estrutura do Projeto — Arquitetura em Camadas
+---
 
-O projeto segue uma estrutura organizada por módulos, facilitando manutenção, escalabilidade e clareza no desenvolvimento.
+## 📜 Estrutura do Projeto — Arquitetura em Camadas
 
+O projeto segue uma organização modular para facilitar manutenção e escalabilidade.
+
+```
 /
 ├── app/                       # Código-fonte principal da aplicação
 │   ├── models/                # Modelos SQLAlchemy (tabelas do banco)
@@ -23,95 +26,140 @@ O projeto segue uma estrutura organizada por módulos, facilitando manutenção,
 │   ├── env.py
 │   └── script.py.mako
 │
-├── uploads/                   # Diretório para arquivos enviados (imagens etc.)
+├── uploads/                   # Diretório para uploads (imagens, etc.)
 │
-├── venv/                      # Ambiente virtual do Python
+├── venv/                      # Ambiente virtual
 │
-└── alembic.ini                # Arquivo de configuração do Alembic
+└── alembic.ini                # Configuração principal do Alembic
+```
 
-🚀 Como Configurar e Rodar o Projeto
-🔧 Pré-requisitos
+---
 
-Python 3.9 ou superior
+## 🚀 Como Configurar e Rodar o Projeto
 
-Git
+### 🔧 **Pré-requisitos**
 
-PostgreSQL rodando localmente
+* Python **3.9+**
+* Git
+* PostgreSQL instalado e rodando
+* Pip
 
-Pip instalado
+---
 
-📥 Passo a Passo de Instalação
-1️⃣ Clone o Repositório
+## 📥 **Passo a Passo de Instalação**
+
+### **1️⃣ Clone o Repositório**
+
+```bash
 git clone https://github.com/SEU_USUARIO/achapet-backend.git
 cd achapet-backend
+```
 
-2️⃣ Crie e Ative o Ambiente Virtual
-# Criar o ambiente virtual
+---
+
+### **2️⃣ Crie e Ative o Ambiente Virtual**
+
+```bash
+# Criar ambiente virtual
 python3 -m venv venv
 
-# Ativar (Mac/Linux)
+# Ativar (Linux/Mac)
 source venv/bin/activate
 
 # Ativar (Windows)
 .\venv\Scripts\Activate.ps1
+```
 
+---
 
-Você saberá que está ativado ao ver (venv) antes do comando no terminal.
+### **3️⃣ Instale as Dependências**
 
-3️⃣ Instale as Dependências
+```bash
 pip install -r requirements.txt
+```
 
-4️⃣ Configure o Banco de Dados
+---
 
-Abra seu cliente PostgreSQL (pgAdmin, DBeaver, Beekeeper, etc).
+### **4️⃣ Configure o Banco de Dados**
 
-Crie um banco novo, por exemplo: achapet_db
+Crie um banco no PostgreSQL chamado:
 
-5️⃣ Configure as Variáveis de Ambiente
+```
+achapet_db
+```
 
-Caso exista um arquivo .env.example, copie:
+---
 
+### **5️⃣ Configure as Variáveis de Ambiente**
+
+Se houver `.env.example`:
+
+```bash
 cp .env.example .env
+```
 
+Caso contrário, crie um `.env` dentro de `app/` com:
 
-Se não houver, crie manualmente seu .env dentro da pasta app/ com as informações:
-
+```
 DATABASE_URL=postgresql://usuario:senha@localhost:5432/achapet_db
-SECRET_KEY=sua_chave_secreta_aqui
+SECRET_KEY=sua_chave_secreta
 ALGORITHM=HS256
+```
 
+Ajuste conforme seu ambiente.
 
-Ajuste conforme suas credenciais.
+---
 
-6️⃣ Execute as Migrações do Banco
+### **6️⃣ Execute as Migrações com Alembic**
+
+```bash
 alembic upgrade head
+```
 
+---
 
-Isso criará todas as tabelas necessárias.
+### **7️⃣ Rode a API**
 
-7️⃣ Rode a Aplicação
-
-Você já me informou os comandos, então aqui está:
-
-# Ativar o venv
+```bash
+# Ativar venv
 source venv/bin/activate
 
-# Rodar a API
+# Rodar servidor FastAPI
 uvicorn app.main:app --reload
-
+```
 
 A API estará disponível em:
 
-👉 http://127.0.0.1:8000
+👉 **[http://127.0.0.1:8000](http://127.0.0.1:8000)**
 
-📚 Documentação da API
+---
 
-A documentação automática do FastAPI está disponível em:
+## 📚 Documentação da API
 
-Swagger UI
+* **Swagger UI:**
+  👉 [http://127.0.0.1:8000/docs](http://127.0.0.1:8000/docs)
 
-👉 http://127.0.0.1:8000/docs
+* **ReDoc:**
+  👉 [http://127.0.0.1:8000/redoc](http://127.0.0.1:8000/redoc)
 
-ReDoc
+---
 
-👉 http://127.0.0.1:8000/redoc
+## 🤝 Contribuição
+
+Pull requests são bem-vindos!
+Se for uma alteração grande, abra uma issue antes para discutirmos.
+
+---
+
+## 🐾 AchaPet — Conectando Pets Perdidos aos Seus Donos 💛
+
+---
+
+Se quiser, posso adicionar:
+
+✅ Badges (Python, FastAPI, License, Status)
+✅ Imagens e logo
+✅ Seção de endpoints
+✅ Instruções de deploy (Railway, Render, Docker)
+
+Só pedir!
