@@ -4,6 +4,8 @@
 
 API desenvolvida em **FastAPI** para gerenciamento de pets, usuários e funcionalidades do sistema AchaPet.
 
+Frontend disponível em: https://github.com/rebecamariamg/achapet-frontend
+
 ---
 
 ## 📜 Estrutura do Projeto — Arquitetura em Camadas
