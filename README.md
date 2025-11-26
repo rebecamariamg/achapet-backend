@@ -142,24 +142,3 @@ A API estará disponível em:
 * **ReDoc:**
   👉 [http://127.0.0.1:8000/redoc](http://127.0.0.1:8000/redoc)
 
----
-
-## 🤝 Contribuição
-
-Pull requests são bem-vindos!
-Se for uma alteração grande, abra uma issue antes para discutirmos.
-
----
-
-## 🐾 AchaPet — Conectando Pets Perdidos aos Seus Donos 💛
-
----
-
-Se quiser, posso adicionar:
-
-✅ Badges (Python, FastAPI, License, Status)
-✅ Imagens e logo
-✅ Seção de endpoints
-✅ Instruções de deploy (Railway, Render, Docker)
-
-Só pedir!
